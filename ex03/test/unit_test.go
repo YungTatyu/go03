@@ -19,3 +19,9 @@ func TestIndex(t *testing.T) {
 	expect(piscine.Index("", "test"), -1, t)
 	expect(piscine.Index("test", ""), -1, t)
 }
+
+func TestStrnCmp(t *testing.T) {
+	expect(piscine.StrnCmp("this is test", "this", 4), 0, t)
+	expect(piscine.StrnCmp("thi", "this", 4), -1, t)
+	expect(piscine.StrnCmp("", "this", 4), -1, t)
+}
